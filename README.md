@@ -16,6 +16,39 @@ This repository provides a template for creating a professional freelance portfo
 
 As you go through this setup, please find all the most up to date information in the [official documentation here](https://squidfunk.github.io/mkdocs-material/getting-started/).
 
+## Continuous integration and deployment
+
+The workflow in `.github/workflows/ci.yml` runs on pushes to any branch,
+pull requests, and manual runs from the GitHub Actions tab. It uses Python
+from `.python-version` and installs the dependencies in `requirements.txt`.
+MkDocs and Material are pinned to the versions verified for this site;
+transitive dependencies are resolved by pip.
+
+The pipeline checks dependency compatibility and builds with `mkdocs build
+--strict`, so configuration warnings and build errors fail the check. A
+successful run saves the generated site as a `website` artifact for seven
+days. Successful pushes or manual runs on the repository's default branch
+also deploy to GitHub Pages. Other branches and pull requests only build.
+Deployment uses the Pages URL supplied by GitHub, including repository
+subpaths or a custom domain configured in Pages settings.
+
+The website repository is
+[jmallia91/mkdocs-website-jonathan](https://github.com/jmallia91/mkdocs-website-jonathan).
+Push changes to its default branch to publish updates.
+In **Settings > Pages > Build and deployment**, set **Source** to
+**GitHub Actions** before running the deployment. Under **Actions**, check
+the **Site CI and Pages** run. No personal access token is needed by the
+workflow; it uses GitHub's built-in token. If you use
+branch protection, select **Build MkDocs site** as a required check after its
+first run.
+
+Run the same checks locally in PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip check
+.\.venv\Scripts\python.exe -m mkdocs build --strict
+```
+
 ## Quick Start
 
 ### Windows PowerShell (local preview)

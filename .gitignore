@@ -89,6 +89,9 @@ target/
 # Exclude virtual environment
 .venv/
 
+# Generated MkDocs website
+/site/
+
 # Exclude trained models
 /models/
 

@@ -1,7 +1,8 @@
 site_name: Jonathan Mallia
 site_description: Software and AI automation development for small and medium-sized businesses. Automate workflows, connect systems, and make practical use of AI.
 site_author: Jonathan Mallia
-# Set site_url to your public website URL before publishing.
+# GitHub Actions supplies the Pages URL, including any repository subpath.
+site_url: !ENV [SITE_URL, ""]
 
 nav:
   - Home: index.md
