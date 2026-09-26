@@ -1,0 +1,103 @@
+﻿:root {
+  --jm-pale-sky: #b9d6f2;
+  --jm-prussian: #061a40;
+  --jm-sapphire: #0353a4;
+  --jm-ocean: #006daa;
+  --jm-black: #000000;
+  --jm-white: #ffffff;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--jm-prussian);
+  --md-accent-fg-color: var(--jm-ocean);
+  --md-typeset-a-color: var(--jm-sapphire);
+  --md-default-bg-color: var(--jm-white);
+  --md-default-fg-color: var(--jm-prussian);
+  --md-default-fg-color--light: #43536d;
+  --jm-surface: #f2f7fc;
+  --jm-border: #d2e2f2;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--jm-prussian);
+  --md-accent-fg-color: var(--jm-pale-sky);
+  --md-typeset-a-color: var(--jm-pale-sky);
+  --md-default-bg-color: var(--jm-prussian);
+  --md-default-fg-color: var(--jm-white);
+  --md-default-fg-color--light: var(--jm-pale-sky);
+  --jm-surface: #0c2851;
+  --jm-border: #345174;
+}
+
+.md-grid { max-width: 64rem; }
+.md-header { background: var(--jm-prussian); }
+.md-typeset { font-size: .82rem; line-height: 1.8; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+.md-typeset h2 { margin-top: 2.8rem; }
+.md-typeset a:focus-visible, .md-header a:focus-visible {
+  outline: 3px solid var(--md-accent-fg-color);
+  outline-offset: 4px;
+}
+.md-typeset .md-button {
+  border-radius: .35rem;
+  padding: .7em 1.3em;
+  font-size: .75rem;
+}
+.md-typeset .md-button--primary {
+  background: var(--jm-sapphire);
+  border-color: var(--jm-sapphire);
+  color: var(--jm-white);
+}
+.md-typeset .md-button--primary:hover,
+.md-typeset .md-button--primary:focus {
+  background: var(--jm-ocean);
+  border-color: var(--jm-ocean);
+  color: var(--jm-white);
+}
+.md-typeset .service-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.md-typeset .service-cards > ul > li {
+  background: var(--jm-surface);
+  border: 1px solid var(--jm-border);
+  border-radius: .6rem;
+  padding: 1.2rem;
+}
+.md-typeset .service-cards .twemoji { color: var(--md-typeset-a-color); }
+.md-typeset .service-cards hr { border-color: var(--jm-border); }
+.md-typeset .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+.md-typeset .skill-tags li {
+  margin: 0;
+  padding: .3rem .7rem;
+  background: var(--jm-surface);
+  border: 1px solid var(--jm-border);
+  border-radius: .3rem;
+  font-size: .7rem;
+  font-weight: 600;
+}
+.contact-panel {
+  margin: 3rem 0 2rem;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid var(--jm-ocean);
+  border-radius: 0 .6rem .6rem 0;
+  background: var(--jm-surface);
+}
+.md-typeset .contact-panel h2 { margin-top: 0; }
+.md-typeset .contact-panel a { overflow-wrap: anywhere; }
+.md-footer, .md-footer-meta { background: var(--jm-prussian); }
+@media (max-width: 900px) {
+  .md-typeset .service-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .md-typeset .service-cards { grid-template-columns: 1fr; }
+  .contact-panel { padding: 1.2rem; }
+}

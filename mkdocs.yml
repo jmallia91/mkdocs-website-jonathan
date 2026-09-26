@@ -1,0 +1,91 @@
+site_name: Jonathan Mallia
+site_description: Software and AI automation development for small and medium-sized businesses. Automate workflows, connect systems, and make practical use of AI.
+site_author: Jonathan Mallia
+# Set site_url to your public website URL before publishing.
+
+nav:
+  - Home: index.md
+  - Book a Free Intro Call: https://calendly.com/jmallia91/30min
+
+# Keep sample files for future use, but omit them from the site and search.
+exclude_docs: |
+  /portfolio/
+  /blog/
+  /assets/@daveebbelaar.jpg
+  /assets/openai-end-to-end-aml-deployment.svg
+  /assets/favicon.png
+  /CNAME
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - toc.integrate
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.prefetch
+    - content.tooltips
+    - content.tabs.link
+    - content.code.copy
+    - navigation.footer
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: custom
+      accent: custom  
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: custom
+      accent: custom
+  font:
+    text: Montserrat
+    code: Roboto Mono
+  icon:
+    logo: material/slash-forward-box
+  favicon: assets/jm-favicon.svg
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jonathan-mallia-69191560/
+    - icon: material/email-outline
+      link: mailto:jonathan@jonathanmallia.dev
+    - icon: material/calendar-month
+      link: https://calendly.com/jmallia91/30min
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/hero.css
+plugins:
+  - search
+  # Enable social cards once the public site_url is configured.
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - pymdownx.keys
+
+copyright: |
+  &copy; 2026 Jonathan Mallia. All rights reserved.

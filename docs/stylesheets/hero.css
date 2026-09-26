@@ -1,0 +1,61 @@
+﻿.hero-section {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem 0 2rem;
+  border-bottom: 1px solid var(--jm-border);
+}
+.hero-copy, .workflow-panel { min-width: 0; }
+.md-typeset .eyebrow {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.md-typeset .hero-copy h1 {
+  font-size: clamp(2rem, 4.3vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.12;
+  margin: .8rem 0 1.2rem;
+  letter-spacing: -.055em;
+}
+.md-typeset .hero-role { font-weight: 600; color: var(--md-typeset-a-color); }
+.md-typeset .hero-secondary { display: inline-block; margin: .7rem 0 .7rem .8rem; font-size: .7rem; }
+.md-typeset .hero-credentials {
+  margin-top: 1.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: .7rem;
+}
+.workflow-panel {
+  padding: 1.7rem;
+  border: 1px solid #345174;
+  border-top: 4px solid var(--jm-ocean);
+  border-radius: .8rem;
+  background: var(--jm-prussian);
+  color: var(--jm-white);
+  box-shadow: 0 .6rem 1.8rem #00000014;
+}
+.workflow-panel .eyebrow { color: var(--jm-pale-sky); }
+.md-typeset .workflow-panel h3 {
+  margin-top: .7rem;
+  color: var(--jm-white);
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+.md-typeset .workflow-steps { list-style: none; margin: 1.5rem 0; padding: 0; }
+.md-typeset .workflow-steps li {
+  display: flex;
+  gap: .8rem;
+  margin: 0;
+  padding: .8rem 0;
+  border-top: 1px solid #345174;
+}
+.workflow-steps .step-number { color: var(--jm-pale-sky); font-size: .7rem; padding-top: .1rem; }
+.workflow-steps strong { display: block; font-size: .85rem; }
+.workflow-steps .step-copy > span { display: block; color: var(--jm-pale-sky); font-size: .7rem; line-height: 1.6; }
+.md-typeset .workflow-note { margin-bottom: 0; font-size: .65rem; color: var(--jm-pale-sky); }
+@media (max-width: 800px) {
+  .hero-section { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1rem; }
+  .workflow-panel { padding: 1.3rem; }
+}
