@@ -126,3 +126,9 @@ Prefer to write? [jonathan@jonathanmallia.dev](mailto:jonathan@jonathanmallia.de
 Connect with me on [LinkedIn :fontawesome-brands-linkedin:](https://www.linkedin.com/in/jonathan-mallia-69191560/).
 
 </div>
+
+## Read my blog
+
+Find my writing on Substack, where you can read my posts and subscribe for updates.
+
+[Read my blog :material-arrow-top-right:](https://jonathanmallia.substack.com/){ .md-button .md-button--primary }

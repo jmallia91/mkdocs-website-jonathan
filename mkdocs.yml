@@ -6,6 +6,7 @@ site_url: !ENV [SITE_URL, ""]
 
 nav:
   - Home: index.md
+  - Blog: https://jonathanmallia.substack.com/
   - Book a Free Intro Call: https://calendly.com/jmallia91/30min
 
 # Keep sample files for future use, but omit them from the site and search.
